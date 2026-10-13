@@ -27,8 +27,11 @@ Production Capstone Project is a responsive product store developed using HTML5,
 ## 📂 Project Structure
 production-capstone-project/
 ├── index.html
+|
 ├── style.css
+|
 ├── script.js
+|
 └── README.md
 
 ## 🚀 How to Run
