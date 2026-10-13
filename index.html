@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Capstone | Product Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛍️ Production Product Store</h1>
+    <p>Smart Shopping Made Simple</p>
+</header>
+
+<main class="container">
+
+    <section class="login-section">
+        <h2>🔐 Login Simulation</h2>
+        <input type="text" id="username" placeholder="Enter your username"
+               aria-label="Username">
+        <button id="loginBtn" type="button">Login</button>
+        <p id="loginMessage" role="status">Please log in to continue.</p>
+    </section>
+
+    <section class="products-section">
+        <h2>🛒 Product Catalog</h2>
+
+        <input type="search" id="searchInput"
+               placeholder="Search products..."
+               aria-label="Search products">
+
+        <select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+
+        <div id="productList" class="product-grid"></div>
+    </section>
+
+    <section class="admin-section">
+        <h2>➕ Add a Product</h2>
+
+        <form id="productForm">
+            <label for="productName">Product Name</label>
+            <input id="productName" type="text" required>
+
+            <label for="productPrice">Price (₹)</label>
+            <input id="productPrice" type="number" min="1" required>
+
+            <label for="productCategory">Category</label>
+            <select id="productCategory" required>
+                <option value="Electronics">Electronics</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+
+            <button type="submit">Add Product</button>
+        </form>
+    </section>
+
+    <section class="cart-section">
+        <h2>🛒 Shopping Cart</h2>
+        <ul id="cartList"></ul>
+        <h3 id="cartTotal">Total: ₹0</h3>
+        <button id="clearCartBtn" type="button">Clear Cart</button>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Production Capstone Project | Built with HTML, CSS and JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
