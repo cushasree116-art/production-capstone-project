@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive product store with product management and shopping cart features.">
+    <title>ShopSmart | Production Capstone Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body><header class="header">
+    <div class="container navbar">
+        <h1>🛍️ ShopSmart</h1>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#manage">Manage Products</a>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </div>
+</header><main>
+    <section class="hero" id="home">
+        <div class="container">
+            <p class="badge">PRODUCTION CAPSTONE PROJECT</p>
+            <h2>Discover Your Next Favorite Product</h2>
+            <p>Explore products, manage your store, and enjoy a simple shopping experience.</p>
+            <a href="#products" class="button">Explore Products →</a>
+        </div>
+    </section><section class="container section" aria-labelledby="features-title">
+    <h2 id="features-title">✨ Store Features</h2>
+    <div class="feature-grid">
+        <article class="feature-card">
+            <h3>🔍 Smart Search</h3>
+            <p>Search products and filter them by category.</p>
+        </article>
+        <article class="feature-card">
+            <h3>📦 Product Management</h3>
+            <p>Add, edit, and delete products easily.</p>
+        </article>
+        <article class="feature-card">
+            <h3>🛒 Shopping Cart</h3>
+            <p>Add products to your cart and change quantities.</p>
+        </article>
+        <article class="feature-card">
+            <h3>💾 Data Storage</h3>
+            <p>Save store data in your browser using localStorage.</p>
+        </article>
+    </div>
+</section>
+
+<section class="container section" id="products">
+    <h2>🛍️ Our Products</h2>
+
+    <div class="filters">
+        <label for="search">Search products</label>
+        <input type="search" id="search" placeholder="Search by product name...">
+
+        <label for="category-filter">Filter by category</label>
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Home">Home</option>
+        </select>
+    </div>
+
+    <p id="product-message" class="message" role="status"></p>
+    <div id="product-list" class="product-grid"></div>
+</section>
+
+<section class="container section" id="manage">
+    <h2>⚙️ Manage Products</h2>
+    <p>Add a new product or edit an existing product.</p>
+
+    <form id="product-form" class="product-form">
+        <input type="hidden" id="product-id">
+
+        <div>
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" required maxlength="60"
+                   placeholder="Enter product name">
+        </div>
+
+        <div>
+            <label for="product-price">Price (₹)</label>
+            <input type="number" id="product-price" required min="1"
+                   step="0.01" placeholder="Enter price">
+        </div>
+
+        <div>
+            <label for="product-category">Category</label>
+            <select id="product-category" required>
+                <option value="">Choose category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Home">Home</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="product-description">Description</label>
+            <input type="text" id="product-description" required maxlength="150"
+                   placeholder="Describe the product">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="button">Save Product</button>
+            <button type="button" id="cancel-edit" class="button secondary" hidden>
+                Cancel Edit
+            </button>
+        </div>
+    </form>
+
+    <p id="form-message" class="message" role="status"></p>
+</section>
+
+<section class="container section" id="cart">
+    <h2>🛒 Your Shopping Cart</h2>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-summary">
+        <h3>Total: <span id="cart-total">₹0.00</span></h3>
+        <button type="button" id="clear-cart" class="button secondary">
+            Clear Cart
+        </button>
+        <button type="button" id="checkout" class="button">
+            Checkout
+        </button>
+    </div>
+    <p id="cart-message" class="message" role="status"></p>
+</section>
+
+<section class="container section">
+    <h2>🔐 Demo Login</h2>
+    <p>This is a login simulation for demonstration purposes, not a secure authentication system.</p>
+    <form id="login-form" class="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" required maxlength="40"
+               placeholder="Enter your username">
+        <button type="submit" class="button">Demo Login</button>
+    </form>
+    <p id="login-message" class="message" role="status"></p>
+</section>
+
+</main><footer class="footer">
+    <div class="container">
+        <p>© 2026 ShopSmart | Production Capstone Project</p>
+        <p>Built with HTML5, CSS3 and JavaScript.</p>
+    </div>
+</footer></body>
+</html>
